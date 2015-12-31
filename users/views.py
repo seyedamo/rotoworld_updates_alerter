@@ -19,7 +19,7 @@ def signup(request):
 
 
 class UserFormCreationView(FormView):
-    template_name = 'contact.html'
+    template_name = 'signup.html'
     form_class = SignUpForm
 
     def form_valid(self, form):
