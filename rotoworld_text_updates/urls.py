@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+
 import settings
 from data.views import TeamViewSet, PositionViewSet, SportViewSet, LeagueViewSet, PlayerNewsViewSet, PlayerViewSet
-from users.views import UserCreationView
-from django.views.generic import TemplateView
+from users.views import UserCreationView, index
 
 team_list = TeamViewSet.as_view({
     'get': 'list'
@@ -69,7 +69,7 @@ player_news_detail = PlayerNewsViewSet.as_view({
 })
 
 urlpatterns = [
-    url(r'^signup', TemplateView.as_view(template_view='signup.html')),
+    url(r'^signup', index, name='signup'),
     url(r'^users', UserCreationView.as_view()),
     url(r'^players/$', player_list, name='player-list'),
     url(r'^players/(?P<pk>[0-9]+)/$', player_detail, name='player-detail'),
