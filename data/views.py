@@ -103,7 +103,7 @@ class PlayerNewsViewSet(ReadOnlyModelViewSet):
     serializer_class = PlayerNewsSerializer
 
     def get_queryset(self):
-        queryset = PlayerNews.objects.all().order_by('-player__last_name').order_by('-player__first_name').order_by('timestamp')
+        queryset = PlayerNews.objects.all().order_by('-player__last_name').order_by('-player__first_name').order_by('-timestamp')
         first_name = self.request.query_params.get('first_name', None)
         last_name = self.request.query_params.get('last_name', None)
         team_abbreviation = self.request.query_params.get('team_abbreviation', None)
