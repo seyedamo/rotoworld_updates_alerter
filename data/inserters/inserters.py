@@ -1,11 +1,13 @@
-from data.models import Sport, League, Position, Team, Player, PlayerNews
-from data.inserters.utils import rotoworld_team_nickname_to_abbreviation, doneTextSend
 import csv
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from lxml import html
+import os
 from datetime import datetime
+
+from lxml import html
 from pytz import utc, timezone
+from selenium import webdriver
+
+from data.inserters.utils import rotoworld_team_nickname_to_abbreviation, doneTextSend
+from data.models import Sport, League, Position, Team, Player, PlayerNews
 
 
 def insert_sports():
@@ -115,8 +117,9 @@ def insert_player_news_source(source):
 
 
 def insert_player_news(chromedriver_path):
+    os.environ["webdriver.chrome.driver"] = chromedriver_path
     rotoworld_player_url = "http://www.rotoworld.com/playernews/nba/basketball-player-news"
-    driver = webdriver.Chrome(chromedriver_path)
+    driver = webdriver.Chrome(executable_path=chromedriver_path)
     driver.get(rotoworld_player_url)
     source = driver.page_source
     while insert_player_news_source(source):
