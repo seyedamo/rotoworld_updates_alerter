@@ -119,10 +119,12 @@ def insert_player_news_source(source):
 def insert_player_news(chromedriver_path):
     os.environ["webdriver.chrome.driver"] = chromedriver_path
     rotoworld_player_url = "http://www.rotoworld.com/playernews/nba/basketball-player-news"
-    driver = webdriver.Chrome(executable_path=chromedriver_path)
-    driver.get(rotoworld_player_url)
-    source = driver.page_source
-    while insert_player_news_source(source):
-        driver.find_element_by_name("ctl00$cp1$ctl00$btnNavigate1").click()
+    driver = webdriver.PhantomJS(executable_path=chromedriver_path)
+    try:
+        driver.get(rotoworld_player_url)
         source = driver.page_source
-    driver.close()
+        while insert_player_news_source(source):
+            driver.find_element_by_name("ctl00$cp1$ctl00$btnNavigate1").click()
+            source = driver.page_source
+    finally:
+        driver.close()
