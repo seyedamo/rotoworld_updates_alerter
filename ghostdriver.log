@@ -1,52 +1,52 @@
 PhantomJS is launching GhostDriver...
-[INFO  - 2015-12-31T23:32:12.003Z] GhostDriver - Main - running on port 53640
-[INFO  - 2015-12-31T23:32:12.198Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
-[INFO  - 2015-12-31T23:32:12.198Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.customHeaders:  - {}
-[INFO  - 2015-12-31T23:32:12.198Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2015-12-31T23:32:12.198Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b7ac0020-b016-11e5-babb-47317ba0e32a
-[ERROR - 2015-12-31T23:32:13.232Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: jQuery
-[ERROR - 2015-12-31T23:32:13.232Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[INFO  - 2015-12-31T23:33:11.779Z] GhostDriver - Main - running on port 53721
+[INFO  - 2015-12-31T23:33:12.025Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-12-31T23:33:12.025Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.customHeaders:  - {}
+[INFO  - 2015-12-31T23:33:12.025Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"mac-10.10 (Yosemite)-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-12-31T23:33:12.025Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: db54e050-b016-11e5-9f42-2363c6e992d5
+[ERROR - 2015-12-31T23:33:13.335Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2015-12-31T23:33:13.335Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/zlibs/jquery.hoverIntent.minified.js:8)
-[ERROR - 2015-12-31T23:32:13.241Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:13.241Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:13.344Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:13.344Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/zlibs/flyoutnav_v09042013.js:58)
-[ERROR - 2015-12-31T23:32:13.253Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: jQuery
-[ERROR - 2015-12-31T23:32:13.253Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:13.355Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2015-12-31T23:33:13.355Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/zlibs/jcarousellite_1.0.1.js:341)
-[ERROR - 2015-12-31T23:32:13.254Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: jQuery
-[ERROR - 2015-12-31T23:32:13.254Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:13.356Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: jQuery
+[ERROR - 2015-12-31T23:33:13.356Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/zlibs/jquery.easing.1.3.js:39)
-[ERROR - 2015-12-31T23:32:14.053Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.053Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:13.971Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:13.971Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:98)
-[ERROR - 2015-12-31T23:32:14.055Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.055Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:13.975Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:13.975Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:203)
-[ERROR - 2015-12-31T23:32:14.280Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.280Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.225Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.225Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:1137)
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:1149)
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:1161)
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.281Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.226Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:1176)
-[ERROR - 2015-12-31T23:32:14.287Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.287Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.232Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.232Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:1248)
-[ERROR - 2015-12-31T23:32:14.323Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.323Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.261Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.261Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:2099)
-[ERROR - 2015-12-31T23:32:14.345Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.345Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.285Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.285Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/playernews/nba/basketball-player-news:2364)
-[ERROR - 2015-12-31T23:32:14.506Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating 'window.$.client = { os : BrowserDetect.OS, browser : BrowserDetect.browser }')
-[ERROR - 2015-12-31T23:32:14.506Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.485Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: TypeError: 'undefined' is not an object (evaluating 'window.$.client = { os : BrowserDetect.OS, browser : BrowserDetect.browser }')
+[ERROR - 2015-12-31T23:33:14.485Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://scores.nbcsports.msnbc.com/ticker/scripts/jquery.client.js:121)
   (anonymous function) (http://scores.nbcsports.msnbc.com/ticker/scripts/jquery.client.js:123)
-[ERROR - 2015-12-31T23:32:14.508Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - msg: ReferenceError: Can't find variable: $
-[ERROR - 2015-12-31T23:32:14.508Z] Session [b7ac0020-b016-11e5-babb-47317ba0e32a] - page.onError - stack:
+[ERROR - 2015-12-31T23:33:14.486Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - msg: ReferenceError: Can't find variable: $
+[ERROR - 2015-12-31T23:33:14.486Z] Session [db54e050-b016-11e5-9f42-2363c6e992d5] - page.onError - stack:
   (anonymous function) (http://www.rotoworld.com/scoreboard-jquery-nbc/ticker.html?width=715&sports=nfl|nba|nhl|cfb|epl|golf|cbk:30)
