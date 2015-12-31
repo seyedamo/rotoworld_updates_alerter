@@ -1,0 +1,1 @@
+web: gunicorn rotoworld_text_updates.wsgi --log-file -
