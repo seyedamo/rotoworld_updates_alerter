@@ -27,7 +27,7 @@ SECRET_KEY = ')kmp6efou#$mi93n%qm)=g!f(qpc$7q)9nt03(8te&gu0711c7'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-DATABASES = { 'default' : dj_database_url.config()}
+DATABASES = { 'default' : dj_database_url.config(default="postgres://pycjrsmvkwvuqr:PZ2kHhsER9caCDvtajuZdhgmXx@ec2-54-204-12-25.compute-1.amazonaws.com:5432/dekk603dntt281")}
 
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10
