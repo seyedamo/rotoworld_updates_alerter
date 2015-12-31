@@ -70,7 +70,7 @@ player_news_detail = PlayerNewsViewSet.as_view({
 
 urlpatterns = [
     url(r'^signup', index, name='signup'),
-    url(r'^users', UserCreationView.as_view()),
+    url(r'^users/$', UserCreationView.as_view()),
     url(r'^players/$', player_list, name='player-list'),
     url(r'^players/(?P<pk>[0-9]+)/$', player_detail, name='player-detail'),
     url(r'^teams/$', team_list, name='team-list'),
