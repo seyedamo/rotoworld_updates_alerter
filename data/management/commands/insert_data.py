@@ -9,4 +9,4 @@ class Command(BaseCommand):
         insert_leagues()
         insert_positions()
         insert_teams(nba_team_name_csv='data/inserters/static/nba_team_name_mapping.csv')
-        insert_player_news()
+        insert_player_news('chromedriver')

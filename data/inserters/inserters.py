@@ -114,9 +114,9 @@ def insert_player_news_source(source):
     return all_new_player_news
 
 
-def insert_player_news():
+def insert_player_news(chromedriver_path):
     rotoworld_player_url = "http://www.rotoworld.com/playernews/nba/basketball-player-news"
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(chromedriver_path)
     driver.get(rotoworld_player_url)
     source = driver.page_source
     while insert_player_news_source(source):
