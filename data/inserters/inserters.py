@@ -97,7 +97,7 @@ def insert_player_news_source(source):
         players_data = players[index]
         players_data.append(player_reports[index].encode('utf-8').replace("\n", "").strip())
         players_data.append(player_impacts[index].encode('utf-8').replace("\n", "").strip())
-        players_data.append(timezone("US/Eastern").localize(datetime.strptime("{0} {1}".format(datetime.now(utc).year, raw_datetime[index]), "%Y %b %d - %I:%M %p")).astimezone(utc))
+        players_data.append(timezone("US/Eastern").localize(datetime.strptime("{0} {1}".format(datetime.now(timezone("US/Eastern")).year, raw_datetime[index]), "%Y %b %d - %I:%M %p")).astimezone(utc))
         players[index] = players_data
     for player in players:
         team = Team.objects.get(abbreviation=rotoworld_team_nickname_to_abbreviation(player[1]))
