@@ -70,7 +70,7 @@ player_news_detail = PlayerNewsViewSet.as_view({
 
 urlpatterns = [
     url(r'^goodbye/$', goodbye, name='goodbye'),
-    url(r'^unsubcribe/$', unsubscribe, name='unsubscribe'),
+    url(r'^unsubscribe/$', unsubscribe, name='unsubscribe'),
     url(r'^thanks/$', thanks, name='thanks'),
     url(r'^signup/$', signup, name='signup'),
     url(r'^users/$', UserCreate.as_view(), name='user-add'),
