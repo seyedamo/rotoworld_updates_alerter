@@ -15,6 +15,7 @@
     <div class="signup">
       <h1>Signup For Alerts</h1>
         <form method="post" action="http://rotoworld-updates.herokuapp.com/users/">
+            {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit" />
         </form>
