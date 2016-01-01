@@ -1,13 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, DeleteView
 from django.views.generic.edit import FormView
-from rest_framework.response import Response
-from django.http import HttpResponse
-from rest_framework import status
-
 
 from users.models import User
-
 # Create your views here.
 
 
@@ -71,4 +67,4 @@ class UserUnsubscribe(DeleteView):
         queryset = User.objects.all()
         email_address = request.POST.get('email_address', None)
         queryset.filter(email_address=email_address).delete()
-        return HttpResponse()
+        return HttpResponseRedirect(self.success_url)
