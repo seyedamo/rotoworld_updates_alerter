@@ -14,7 +14,7 @@
   <section class="container">
     <div class="signup">
       <h1>Signup For Alerts</h1>
-        <form class="pure-form" method="post" action="http://rotoworld-updates.herokuapp.com/users/">
+        <form class="pure-form" method="post" action="http://rotoworld-updates.herokuapp.com/add_user/">
             {% csrf_token %}
             {{ form }}
             <button type="submit" class="pure-button pure-button-primary">Subscribe</button>
