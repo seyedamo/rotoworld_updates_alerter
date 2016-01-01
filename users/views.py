@@ -66,5 +66,5 @@ class UserUnsubscribe(DeleteView):
     def delete(self, request, *args, **kwargs):
         queryset = User.objects.all()
         email_address = request.POST.get('email_address', None)
-        queryset = queryset.get(email_address=email_address)
+        queryset = queryset.filter(email_address=email_address)
         return queryset
