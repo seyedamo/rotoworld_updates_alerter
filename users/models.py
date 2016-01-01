@@ -7,4 +7,5 @@ class User(Model):
     email_address = EmailField()
 
     def get_absolute_url(self):
-        pass
+        return "http://rotoworld-updates.herokuapp.com/signup/"
+    

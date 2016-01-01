@@ -20,6 +20,7 @@ from django.contrib import admin
 import settings
 from data.views import TeamViewSet, PositionViewSet, SportViewSet, LeagueViewSet, PlayerNewsViewSet, PlayerViewSet
 from users.views import UserCreate, signup
+from django.core.urlresolvers import reverse
 
 team_list = TeamViewSet.as_view({
     'get': 'list'
@@ -69,7 +70,7 @@ player_news_detail = PlayerNewsViewSet.as_view({
 })
 
 urlpatterns = [
-    url(r'^signup/', signup, name='signup'),
+    url(r'^signup/$', signup, name='signup'),
     url(r'^users/$', UserCreate.as_view(), name='user-add'),
     url(r'^players/$', player_list, name='player-list'),
     url(r'^players/(?P<pk>[0-9]+)/$', player_detail, name='player-detail'),
