@@ -19,7 +19,7 @@ from django.contrib import admin
 
 import settings
 from data.views import TeamViewSet, PositionViewSet, SportViewSet, LeagueViewSet, PlayerNewsViewSet, PlayerViewSet
-from users.views import UserCreate, signup, thanks, unsubscribe, goodbye
+from users.views import UserCreate, UserUnsubscribe, signup, thanks, unsubscribe, goodbye
 
 team_list = TeamViewSet.as_view({
     'get': 'list'
@@ -73,7 +73,8 @@ urlpatterns = [
     url(r'^unsubscribe/$', unsubscribe, name='unsubscribe'),
     url(r'^thanks/$', thanks, name='thanks'),
     url(r'^signup/$', signup, name='signup'),
-    url(r'^users/$', UserCreate.as_view(), name='user-add'),
+    url(r'^add_user/$', UserCreate.as_view(), name='user-add'),
+    url(r'^delete_user/$', UserUnsubscribe.as_view(), name='user-delete'),
     url(r'^players/$', player_list, name='player-list'),
     url(r'^players/(?P<pk>[0-9]+)/$', player_detail, name='player-detail'),
     url(r'^teams/$', team_list, name='team-list'),
