@@ -18,6 +18,11 @@ def signup(request):
         return render(request, 'signup.html', {'form': form})
 
 
+def thanks(request):
+    if request.method == 'GET':
+        return render(request, 'thanks.html')
+
+
 class UserFormCreationView(FormView):
     template_name = 'signup.html'
     form_class = SignUpForm
