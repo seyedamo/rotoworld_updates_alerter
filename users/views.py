@@ -63,8 +63,7 @@ class UserUnsubscribe(DeleteView):
     fields = ['email_address']
     success_url = "http://rotoworld-updates.herokuapp.com/goodbye/"
 
-    def get_queryset(self):
+    def get(self, request, *args, **kwargs):
         queryset = User.objects.all()
-        email_address = self.request.POST.get('email_address', None)
-        queryset = queryset.filter(email_address=email_address)
-        return queryset
+        email_address = request.POST.get('email_address', None)
+        queryset.filter(email_address=email_address).delete()
