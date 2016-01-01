@@ -53,6 +53,7 @@ class PlayerNews(Model):
     player = ForeignKey(Player, on_delete=CASCADE)
     report = TextField()
     impact = TextField()
+    timestamp = DateTimeField()
 
     class Meta:
-        unique_together = ('player', 'report', 'impact')
+        unique_together = ('player', 'report', 'impact', 'timestamp')

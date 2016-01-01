@@ -92,24 +92,25 @@ def insert_player_news_source(source):
             players.append([raw_players[counter], raw_players[counter + 1], raw_player_links[counter], raw_player_positions[counter].encode('utf-8').replace("-", "").replace("\n", "").strip()])
     player_reports = tree.xpath("//div[@class='report']/p/text()")
     player_impacts = tree.xpath("//div[@class='impact']/text()")[3:]
-    # raw_datetime = tree.xpath("//div[@class='info']/div[@class='date']/text()")
+    raw_datetime = tree.xpath("//div[@class='info']/div[@class='date']/text()")
     for index in range(0, len(players)):
         players_data = players[index]
         players_data.append(player_reports[index].encode('utf-8').replace("\n", "").strip())
         players_data.append(player_impacts[index].encode('utf-8').replace("\n", "").strip())
-        # players_data.append(timezone("US/Eastern").localize(datetime.strptime("{0} {1}".format(datetime.now(timezone("US/Eastern")).year, raw_datetime[index]), "%Y %b %d - %I:%M %p")).astimezone(utc))
+        players_data.append(timezone("US/Eastern").localize(datetime.strptime("{0} {1}".format(datetime.now(timezone("US/Eastern")).year, raw_datetime[index]), "%Y %b %d - %I:%M %p")).astimezone(utc))
         players[index] = players_data
     for player in players:
         team = Team.objects.get(abbreviation=rotoworld_team_nickname_to_abbreviation(player[1]))
         position = Position.objects.get(abbreviation=player[3])
         player_names = player[0].split(" ")
         player_obj, created = Player.objects.get_or_create(team=team, position=position, first_name=player_names[0], last_name=player_names[1], rotoworld_url=player[2])
-        playerNews, created = PlayerNews.objects.get_or_create(player=player_obj, report=player[4], impact=player[5])
+        playerNews, created = PlayerNews.objects.get_or_create(player=player_obj, report=player[4], impact=player[5], timestamp=player[6])
         if created:
             doneTextSend(
                     "Rotoworld Update for {0} {1}".format(playerNews.player.first_name, playerNews.player.last_name),
                     playerNews.report,
-                    playerNews.impact
+                    playerNews.impact,
+                    playerNews.timestamp.strftime("%Y-%m-%d %H:%M:%S")
             )
             all_new_player_news = True
     return all_new_player_news

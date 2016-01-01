@@ -186,19 +186,19 @@ from users.models import User
 
 
 
-def doneTextSend(subject, report, impact) :
+def doneTextSend(subject, report, impact, timestamp) :
     '''
     function takes the start and end time (both are floating points) of whatever
     your function is, and the function title (string).
     '''
 
-    username = 'jae.b.bradley'
-    fromaddr = 'jae.b.bradley@gmail.com'
+    username = 'rotoworld.alerts'
+    fromaddr = 'rotoworld.alerts@gmail.com'
     toaddrs  = User.objects.all()
 
     # The actual mail send
     smtpObj = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    smtpObj.login(username, "vpnapyrnwwxqbhxb")
+    smtpObj.login(username, "rotoworld")
 
     for recipient in toaddrs:
         msg = "\r\n".join([
@@ -207,7 +207,8 @@ def doneTextSend(subject, report, impact) :
           "Subject: {2}",
           "",
           "{3}\r\n",
-          "{4}\r\n"
-        ]).format(fromaddr, recipient.email_address, subject, report, impact)
+          "{4}\r\n",
+          "{5} UTC"
+        ]).format(fromaddr, recipient.email_address, subject, report, impact, timestamp)
 
         smtpObj.sendmail(fromaddr, recipient.email_address, msg)
