@@ -198,7 +198,7 @@ def doneTextSend(subject, report, impact, timestamp) :
 
     # The actual mail send
     smtpObj = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    smtpObj.login(username, "rotoworld")
+    smtpObj.login(username, "iymjelocbhjblzji")
 
     for recipient in toaddrs:
         msg = "\r\n".join([
