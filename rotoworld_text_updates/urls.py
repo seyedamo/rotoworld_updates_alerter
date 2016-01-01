@@ -19,7 +19,7 @@ from django.contrib import admin
 
 import settings
 from data.views import TeamViewSet, PositionViewSet, SportViewSet, LeagueViewSet, PlayerNewsViewSet, PlayerViewSet
-from users.views import UserCreate, UserUnsubscribe, signup, thanks, unsubscribe, goodbye, UserDestroyView
+from users.views import UserCreate, UserUnsubscribe, signup, thanks, unsubscribe, goodbye
 
 team_list = TeamViewSet.as_view({
     'get': 'list'
