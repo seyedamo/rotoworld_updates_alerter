@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, DeleteView
 from django.views.generic.edit import FormView
+from rest_framework.response import Response
+from rest_framework import status
 
 from users.models import User
 
@@ -67,3 +69,4 @@ class UserUnsubscribe(DeleteView):
         queryset = User.objects.all()
         email_address = request.POST.get('email_address', None)
         queryset.filter(email_address=email_address).delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
