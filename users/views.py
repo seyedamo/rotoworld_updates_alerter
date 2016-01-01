@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, DeleteView
 from django.views.generic.edit import FormView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.generics import DestroyAPIView
 
 from users.models import User
 
@@ -52,6 +53,15 @@ class UnsubscribeFormView(FormView):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
         return super(SubscriptionForm, self).form_valid(form)
+
+
+class UserDestroyView(DestroyAPIView):
+
+    def get_queryset(self):
+        queryset = User.objects.all()
+        email_address = self.request.POST.get('email_address', None)
+        return queryset.filter(email_address=email_address).delete()
+
 
 
 class UserCreate(CreateView):
