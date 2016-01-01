@@ -2,7 +2,7 @@ from django import forms
 from users.models import User
 
 
-class SignUpForm(forms.ModelForm):
+class SubscriptionForm(forms.ModelForm):
 
     class Meta:
         model = User

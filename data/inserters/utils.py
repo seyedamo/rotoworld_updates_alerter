@@ -186,7 +186,7 @@ from users.models import User
 
 
 
-def doneTextSend(subject, report, impact, timestamp) :
+def doneTextSend(subject, report, impact) :
     '''
     function takes the start and end time (both are floating points) of whatever
     your function is, and the function title (string).
@@ -207,8 +207,7 @@ def doneTextSend(subject, report, impact, timestamp) :
           "Subject: {2}",
           "",
           "{3}\r\n",
-          "{4}\r\n",
-          "{5} UTC"
-        ]).format(fromaddr, recipient.email_address, subject, report, impact, timestamp)
+          "{4}\r\n"
+        ]).format(fromaddr, recipient.email_address, subject, report, impact)
 
         smtpObj.sendmail(fromaddr, recipient.email_address, msg)
