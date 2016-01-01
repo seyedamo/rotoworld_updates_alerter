@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, DeleteView
 from django.views.generic.edit import FormView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.generics import DestroyAPIView
+
 
 from users.models import User
 
@@ -55,15 +55,6 @@ class UnsubscribeFormView(FormView):
         return super(SubscriptionForm, self).form_valid(form)
 
 
-class UserDestroyView(DestroyAPIView):
-
-    def get_queryset(self):
-        queryset = User.objects.all()
-        email_address = self.request.POST.get('email_address', None)
-        return queryset.filter(email_address=email_address).delete()
-
-
-
 class UserCreate(CreateView):
     model = User
     fields = ['email_address']
@@ -75,8 +66,13 @@ class UserUnsubscribe(DeleteView):
     fields = ['email_address']
     success_url = "http://rotoworld-updates.herokuapp.com/goodbye/"
 
-    def delete(self, request, *args, **kwargs):
-        queryset = User.objects.all()
-        email_address = request.POST.get('email_address', None)
-        queryset.filter(email_address=email_address).delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+
+        email_address = self.kwargs['email_address']
+
+        queryset = User.objects.filter(email_address=email_address)
+
+        context = {'email_address': email_address}
+        return context
