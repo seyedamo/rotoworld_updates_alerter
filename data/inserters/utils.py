@@ -178,6 +178,7 @@ behind this fact, however I've never bothered to look.
 """
 
 import smtplib
+from users.models import User
 
 
 # Credentials (if needed)
@@ -193,7 +194,7 @@ def doneTextSend(subject, report, impact, timestamp) :
 
     username = 'jae.b.bradley'
     fromaddr = 'jae.b.bradley@gmail.com'
-    toaddrs  = ['jae.b.bradley@gmail.com', 'gomesrobert21@gmail.com']
+    toaddrs  = User.objects.all()
 
     # The actual mail send
     smtpObj = smtplib.SMTP_SSL('smtp.gmail.com', 465)
@@ -208,6 +209,6 @@ def doneTextSend(subject, report, impact, timestamp) :
           "{3}\r\n",
           "{4}\r\n",
           "{5} UTC"
-        ]).format(fromaddr, recipient, subject, report, impact, timestamp)
+        ]).format(fromaddr, recipient.email_address, subject, report, impact, timestamp)
 
-        smtpObj.sendmail(fromaddr, recipient, msg)
+        smtpObj.sendmail(fromaddr, recipient.email_address, msg)
