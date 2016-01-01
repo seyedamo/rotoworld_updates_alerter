@@ -37,7 +37,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('report', models.TextField()),
                 ('impact', models.TextField()),
-                ('timestamp', models.DateTimeField()),
                 ('player', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='data.Player')),
             ],
         ),
@@ -100,7 +99,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='playernews',
-            unique_together=set([('player', 'report', 'impact', 'timestamp')]),
+            unique_together=set([('player', 'report', 'impact')]),
         ),
         migrations.AlterUniqueTogether(
             name='player',
