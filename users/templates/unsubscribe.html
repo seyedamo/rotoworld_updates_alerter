@@ -13,11 +13,11 @@
 <body>
   <section class="container">
     <div class="signup">
-      <h1>Signup For Alerts</h1>
-        <form method="post" action="http://rotoworld-updates.herokuapp.com/unsubscribe/">
+      <h1>Unsubscribe From Alerts</h1>
+        <form class="pure-form" method="post" action="http://rotoworld-updates.herokuapp.com/unsubscribe/">
             {% csrf_token %}
             {{ form }}
-            <input type="submit" value="Submit" />
+            <button type="submit" class="pure-button pure-button-primary">Unsubscribe</button>
         </form>
     </div>
   </section>
