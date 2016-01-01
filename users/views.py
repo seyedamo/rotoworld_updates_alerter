@@ -55,8 +55,10 @@ class UnsubscribeFormView(FormView):
 class UserCreate(CreateView):
     model = User
     fields = ['email_address']
+    success_url = "http://rotoworld-updates.herokuapp.com/thanks/"
 
 
 class UserUnsubscribe(DeleteView):
     model = User
     fields = ['email_address']
+    success_url = "http://rotoworld-updates.herokuapp.com/goodbye/"

@@ -92,7 +92,7 @@ def insert_player_news_source(source):
             players.append([raw_players[counter], raw_players[counter + 1], raw_player_links[counter], raw_player_positions[counter].encode('utf-8').replace("-", "").replace("\n", "").strip()])
     player_reports = tree.xpath("//div[@class='report']/p/text()")
     player_impacts = tree.xpath("//div[@class='impact']/text()")[3:]
-    raw_datetime = tree.xpath("//div[@class='info']/div[@class='date']/text()")
+    # raw_datetime = tree.xpath("//div[@class='info']/div[@class='date']/text()")
     for index in range(0, len(players)):
         players_data = players[index]
         players_data.append(player_reports[index].encode('utf-8').replace("\n", "").strip())
