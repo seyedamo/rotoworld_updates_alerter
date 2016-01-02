@@ -16,5 +16,10 @@ This is what a sample email looks like
 * [Unsubscribe page](http://rotoworld-updates.herokuapp.com/unsubscribe/)
 
 * Endpoints
-** [Player News](http://rotoworld-updates.herokuapp.com/player_news/)
+ * [Sports](http://rotoworld-updates.herokuapp.com/sports/)
+ * [Leagues](http://rotoworld-updates.herokuapp.com/leagues/)
+ * [Positions](http://rotoworld-updates.herokuapp.com/positions/)
+ * [Teams](http://rotoworld-updates.herokuapp.com/teams/)
+ * [Players](http://rotoworld-updates.herokuapp.com/players/)
+ * [Player News](http://rotoworld-updates.herokuapp.com/player_news/)
 
