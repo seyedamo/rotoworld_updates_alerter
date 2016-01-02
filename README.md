@@ -12,8 +12,12 @@ This is what a sample email looks like
 ![alt-text](https://i.imgur.com/UmhzsLH.png)
 
 ## API
+
 * [Sign up page](http://rotoworld-updates.herokuapp.com/signup/)
 * [Unsubscribe page](http://rotoworld-updates.herokuapp.com/unsubscribe/)
+
+There are queryable data API endpoints that you can access for your own purposes. Example of what the Player News API endpoint looks like
+![alt-text](https://i.imgur.com/2CcOp3Z.png)
 
 * Endpoints
  * [Sports](http://rotoworld-updates.herokuapp.com/sports/)
